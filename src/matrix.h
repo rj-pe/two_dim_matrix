@@ -18,5 +18,7 @@ private:
   int COL_SIZE = 0;
   int ROW_SIZE = 0;
   void range_error();
-  int var_sum; 
+  int var_sum = 0; 
+  int var_max = 0;
+  
 };
