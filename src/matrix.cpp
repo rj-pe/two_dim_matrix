@@ -95,7 +95,19 @@ double Matrix::find_max()
   std::cout<<var_max<<std::endl;  
   return 0;
 }
-double Matrix::find_min(){return 0;}
+double Matrix::find_min()
+{
+    for (int it = 0; it != ROW_SIZE; ++it)
+  {
+    for (int i = 0; i != COL_SIZE; ++i)
+    {
+      if(matrix[it][i] < var_min) {var_min = matrix[it][i];}
+      else {continue;}
+    }
+  }
+  std::cout<<var_min<<std::endl;  
+  return 0;
+}
 //string to_string(){return 0};
 void Matrix::range_error()
 {

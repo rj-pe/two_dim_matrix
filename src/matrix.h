@@ -20,5 +20,5 @@ private:
   void range_error();
   int var_sum = 0; 
   int var_max = 0;
-  
+  int var_min = 999999999;
 };
