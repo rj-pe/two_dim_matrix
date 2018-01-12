@@ -23,4 +23,6 @@ int main(void)
     m1->sum();
     cout<<"largest number in matrix:  ";
     m1->find_max();
+    cout<<"smallest number in matrix:  ";
+    m1->find_min();
 }
