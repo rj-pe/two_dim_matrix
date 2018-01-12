@@ -72,18 +72,16 @@ double Matrix::get_element(int row, int col)
 //methods
 int Matrix::sum()
 {
-  for (vector<vector<int>> it = matrix.begin(); it != matrix.end(); ++it)
+  for (int it = 0; it != ROW_SIZE; ++it)
   {
-    var_sum += *it;
     for (int i = 0; i != COL_SIZE; ++i)
     {
-      var_sum += *i;
+      var_sum += matrix[it][i];
     }
-    }
   }
-  }
-  return var_sum;
-  }
+  std::cout<< var_sum<<std::endl;
+  return 0;
+}
 double Matrix::find_max(){return 0;}
 double Matrix::find_min(){return 0;}
 //string to_string(){return 0};
