@@ -35,7 +35,7 @@ int Matrix::get_row(int row)
   if(row <= ROW_SIZE)
   {
     for (int i=0; i < COL_SIZE; i++)
-    std::cout<<matrix[row][i]<<"\n" ;
+    std::cout<<"("<<row<<", "<<i<<"): "<<matrix[row][i]<<"\n" ;
   }
   else
   {
@@ -82,7 +82,19 @@ int Matrix::sum()
   std::cout<< var_sum<<std::endl;
   return 0;
 }
-double Matrix::find_max(){return 0;}
+double Matrix::find_max()
+{
+  for (int it = 0; it != ROW_SIZE; ++it)
+  {
+    for (int i = 0; i != COL_SIZE; ++i)
+    {
+      if(matrix[it][i] > var_max) {var_max = matrix[it][i];}
+      else {continue;}
+    }
+  }
+  std::cout<<var_max<<std::endl;  
+  return 0;
+}
 double Matrix::find_min(){return 0;}
 //string to_string(){return 0};
 void Matrix::range_error()
